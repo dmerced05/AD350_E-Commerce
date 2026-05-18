@@ -1,0 +1,24 @@
+Id,Name,Shape Library,Page ID,Contained By,Group,Line Source,Line Destination,Source Arrow,Destination Arrow,Status,Text Area 1,Text Area 2,Text Area 3,Text Area 4,Text Area 5,Text Area 6,Text Area 7,Text Area 8,Text Area 9,Text Area 10,Text Area 11,Text Area 12,Text Area 13,Comments,Notes,Shape ID,SpreadsheetColumnParentKey,SpreadsheetRowParentKey
+1,Document,,,,,,,,,Draft,E-Commerce ERD,,,,,,,,,,,,,,,21e695cd-b950-4125-bb68-e41f8eca12df,,
+2,Page,,,,,,,,,,Page 1,,,,,,,,,,,,,,,0_0,,
+3,SparkFrameBlock,Lucidspark Shapes,2,,,,,,,,E-commerce ERD (Crow's Foot with ISA),,,,,,,,,,,,,,,ErOWEdhzHcyP,,
+4,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,USER,UserID PK,Email,PasswordHash,Name,LastLoginDate,,,,,,,,,,ErOWceuJjv36,COLUMN,ROW
+5,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,REVIEW,UserID FK,int,ProductID FK,int,Rating,int,Text,string,ReviewDate,date,,,,,ErOWVk.OYH7N,COLUMN,ROW
+6,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,PRODUCT,ProductID PK,int,CategoryID FK,int,Name,string,Description,string,Price,decimal,SKU,string,,,ErOW4uZ.Z-aw,COLUMN,ROW
+7,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,CATEGORY,CategoryID PK,int,Name,string,Description,string,,,,,,,,,ErOWbhzBKL7f,COLUMN,ROW
+8,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,ORDER,OrderID PK,int,UserID FK,int,OrderDate,date,Status,string,Amount,decimal,,,,,ErOW28t_c-5j,COLUMN,ROW
+9,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,ORDERITEM,OrderID PK FK,int,ProductID PK FK,int,Quantity,int,UnitPriceAtSale,decimal,,,,,,,ErOWF4P~zWQc,COLUMN,ROW
+10,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,WAREHOUSE,WarehouseID PK,int,WarehouseLocation,string,,,,,,,,,,,ErOW1Cze.6-m,COLUMN,ROW
+11,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,PHYSICALPRODUCT,ProductID PK FK,int,Weight,decimal,Dimensions,string,ShippingClass,string,,,,,,,ErOW8ohVDiih,COLUMN,ROW
+12,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,DIGITALPRODUCT,ProductID PK FK,int,DownloadURL,string,FileSize,int,LicenseType,string,,,,,,,ErOWEdV0F9vn,COLUMN,ROW
+13,"Entity (Field, Type)",Entity Relationship,2,3,,,,,,,INVENTORY,InventoryID PK,int,Product ID FK,int,WarehouseID FK,int,Quantity,int,LastRestocked,date,,,,,dJpXEuL85-bC,COLUMN,ROW
+14,Line,,2,,,4,5,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,"""writes""",,,,,,,,,,,,,,,ErOW8_srV9qc,,
+15,Line,,2,,,6,5,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,"""receives""",,,,,,,,,,,,,,,ErOWrICm7e2E,,
+16,Line,,2,,,4,8,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,"""places""",,,,,,,,,,,,,,,ErOWFTbClfkL,,
+17,Line,,2,,,8,9,CFN ERD Exactly One Arrow,CFN ERD One Or More Arrow,,"""contains""",,,,,,,,,,,,,,,ErOWS6gxFGDU,,
+18,Line,,2,,,6,9,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,"""appears in""",,,,,,,,,,,,,,,ErOW-IKN-KL8,,
+19,Line,,2,,,7,6,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,"""contains""",,,,,,,,,,,,,,,ErOWmQJKYBJ4,,
+20,Line,,2,,,6,13,CFN ERD Exactly One Arrow,CFN ERD Zero Or More Arrow,,"""has inventory""",,,,,,,,,,,,,,,ErOWjjya5~rI,,
+21,Line,,2,,,6,12,CFN ERD One Arrow,CFN ERD Many Arrow,,Subtype,,,,,,,,,,,,,,,DCQW_g4QVrB5,,
+22,Line,,2,,,6,11,CFN ERD One Arrow,CFN ERD Many Arrow,,Subtype,,,,,,,,,,,,,,,​-CQWEpWT0M9i,,
+23,Line,,2,,,13,10,CFN ERD Zero Or More Arrow,CFN ERD Exactly One Arrow,,,,,,,,,,,,,,,,,fOpXQ5EO7ja2,,
