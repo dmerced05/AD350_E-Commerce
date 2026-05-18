@@ -1,6 +1,6 @@
 # AD350_E-Commerce
 AD350_E-Commerce
-## Scamazon E-Commerce DB Design
+Scamazon E-Commerce DB Design
 ## Strong and Weak Entity Documentation
 
 ### Strong Entities
