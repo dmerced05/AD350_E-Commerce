@@ -1,7 +1,7 @@
 -- E-Commerce Database Schema (MySQL)
 -- Entities derived from Crow's Foot ERD with ISA subtypes
 -- Normalized to Boyce-Codd Normal Form (BCNF)
-
+DROP DATABASE IF EXISTS ecommerce;
 CREATE DATABASE IF NOT EXISTS ecommerce;
 USE ecommerce;
 
@@ -38,6 +38,7 @@ CREATE TABLE Product (
     Description TEXT           NULL,
     Price       DECIMAL(10,2)  NOT NULL,
     SKU         VARCHAR(100)   NOT NULL,
+    CreatedDate DATE           NULL,
     PRIMARY KEY (ProductID),
     UNIQUE KEY uq_product_sku (SKU),
     CONSTRAINT fk_product_category
@@ -63,7 +64,7 @@ CREATE TABLE PhysicalProduct (
 CREATE TABLE DigitalProduct (
     ProductID   INT          NOT NULL,
     DownloadURL VARCHAR(500) NULL,
-    FileSize    INT          NULL,      -- bytes
+    FileSize    BIGINT          NULL,      -- bytes
     LicenseType VARCHAR(100) NULL,
     PRIMARY KEY (ProductID),
     CONSTRAINT fk_digiprod_product
